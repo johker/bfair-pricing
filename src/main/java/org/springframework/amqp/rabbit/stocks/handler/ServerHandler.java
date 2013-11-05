@@ -15,89 +15,38 @@
  */
 package org.springframework.amqp.rabbit.stocks.handler;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
-import org.springframework.amqp.core.MessageDeliveryMode;
-import org.springframework.amqp.core.MessageProperties;
-import org.springframework.amqp.rabbit.stocks.domain.TradeRequest;
-import org.springframework.amqp.rabbit.stocks.domain.TradeResponse;
-import org.springframework.amqp.rabbit.stocks.service.CreditCheckService;
-import org.springframework.amqp.rabbit.stocks.service.ExecutionVenueService;
-import org.springframework.amqp.rabbit.stocks.service.TradingService;
-import org.springframework.util.StringUtils;
+import org.springframework.amqp.rabbit.stocks.dto.Item;
+import org.springframework.amqp.rabbit.stocks.dto.Market;
+import org.springframework.amqp.rabbit.stocks.dto.Price;
+import org.springframework.amqp.rabbit.stocks.dto.Runner;
+import org.springframework.amqp.rabbit.stocks.service.PriceCalculationService;
 
 
 /**
  * POJO handler that receives trade requests and sends back a trade response.  Main application
- * logic sits here which coordinates between {@link ExecutionVenueService}, {@link CreditCheckService}, 
- * and {@link TradingService}.
+ * logic sits here which coordinates between {@link PriceCalculationService} , ....
  * 
  * @author Mark Pollack
  *
  */
 public class ServerHandler {
 
-    private ExecutionVenueService executionVenueService;
-
-    private CreditCheckService creditCheckService;
-
-    private TradingService tradingService;
     
-    private final AtomicInteger counter = new AtomicInteger();
-	
-	public ServerHandler(ExecutionVenueService executionVenueService,
-						 CreditCheckService creditCheckService, 
-						 TradingService tradingService) {
-		this.executionVenueService = executionVenueService;
-		this.creditCheckService = creditCheckService;
-		this.tradingService = tradingService;
+    private PriceCalculationService priceService;   
+   
+	public ServerHandler( PriceCalculationService priceService) {
+		this.priceService = priceService;
 	}
 	
 	
-	public org.springframework.amqp.rabbit.stocks.dto.Price handleMessage(org.springframework.amqp.rabbit.stocks.dto.Market data) {	
-			
-			for(org.springframework.amqp.rabbit.stocks.dto.Runner r : data.getRunners()) {
-				if(r == null) continue;
-				
-				for(org.springframework.amqp.rabbit.stocks.dto.Item i : r.getAvailableToBack()) {			
-					if(i != null) {
-						System.out.println(i.getPrice());
-					}
-				}
-			}
-			
-			org.springframework.amqp.rabbit.stocks.dto.Price price = new org.springframework.amqp.rabbit.stocks.dto.Price();
-			price.setMarketId("" + counter.incrementAndGet());
-			price.setTheoretical(Math.random() * 100);
-
-			
-			return price;
-			
+	
+	
+	public Price handleMessage(Market data) {		
+			return priceService.updatePrice(data); 
 		}
-	
-
-	public TradeResponse handleMessage(TradeRequest tradeRequest)
-	{
-        TradeResponse tradeResponse;
-        List<?> errors = new ArrayList<Object>();
-        if (creditCheckService.canExecute(tradeRequest, errors))
-        {
-            tradeResponse = executionVenueService.executeTradeRequest(tradeRequest);
-        }
-        else
-        {
-            tradeResponse = new TradeResponse();
-            tradeResponse.setError(true);
-            tradeResponse.setErrorMessage(StringUtils.arrayToCommaDelimitedString(errors.toArray()));
-            
-        }
-        tradingService.processTrade(tradeRequest, tradeResponse);
-        return tradeResponse;
-	}
-	
+		
 	
 	
 }

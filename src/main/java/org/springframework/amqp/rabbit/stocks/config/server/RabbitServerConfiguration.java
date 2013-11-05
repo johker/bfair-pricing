@@ -64,7 +64,6 @@ public class RabbitServerConfiguration extends AbstractStockAppRabbitConfigurati
 		DefaultClassMapper typeMapper = new DefaultClassMapper();
 		Map<String, Class<?>> idClassMapping = new HashMap<String, Class<?>>();
 		idClassMapping.put("bookdto", Market.class);
-		//idClassMapping.put("pricedto", Price.class);
 		typeMapper.setIdClassMapping(idClassMapping);
 		return typeMapper;
 	}
@@ -72,7 +71,6 @@ public class RabbitServerConfiguration extends AbstractStockAppRabbitConfigurati
 	@Override
 	@Bean
 	public MessageConverter jsonMessageConverter() {
-		//return new JsonMessageConverter();
 		return org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory.getInstance(typeMapper());
 	}
 
