@@ -19,14 +19,12 @@ package org.springframework.amqp.rabbit.stocks.config.server;
 import java.util.HashMap;
 import java.util.Map;
 
-
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.stocks.config.AbstractStockAppRabbitConfiguration;
 import org.springframework.amqp.rabbit.stocks.dto.Market;
-import org.springframework.amqp.rabbit.stocks.dto.Price;
+import org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
-import org.springframework.amqp.support.converter.JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -71,7 +69,7 @@ public class RabbitServerConfiguration extends AbstractStockAppRabbitConfigurati
 	@Override
 	@Bean
 	public MessageConverter jsonMessageConverter() {
-		return org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory.getInstance(typeMapper());
+		return MessageConverterFactory.getInstance(typeMapper());
 	}
 
 }

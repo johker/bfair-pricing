@@ -48,12 +48,13 @@ public abstract class AbstractStockAppRabbitConfiguration {
 	/**
 	 * The server-side consumer's queue that provides point-to-point semantics for stock requests.
 	 */
-	protected static String STOCK_REQUEST_QUEUE_NAME = "hello.world.queue.json12"; //"app.stock.request";
+	protected static String STOCK_REQUEST_QUEUE_NAME = "com.bfair.pricing.market"; 
 
 	/**
-	 * Key that clients will use to send to the stock request queue via the default direct exchange.
+	 * Key that clients will use to send to the market information queue via the default direct exchange.
 	 */
 	protected static String STOCK_REQUEST_ROUTING_KEY = STOCK_REQUEST_QUEUE_NAME;
+	
 	
 	@Value("${amqp.port:5672}") 
 	private int port = 5672;

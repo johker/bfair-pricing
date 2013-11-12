@@ -1,0 +1,86 @@
+/*
+ * Copyright 2002-2010 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.springframework.amqp.rabbit.stocks.gateway;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.amqp.core.MessageDeliveryMode;
+import org.springframework.amqp.core.MessageProperties;
+import org.springframework.amqp.rabbit.core.support.RabbitGatewaySupport;
+import org.springframework.amqp.rabbit.stocks.dto.Price;
+import org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory;
+import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
+import org.springframework.amqp.rabbit.stocks.service.PriceDataService;
+import org.springframework.amqp.support.converter.DefaultClassMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * Rabbit implementation of the {@link PriceDataGateway} for sending Market data.
+ * 
+ * @author Mark Pollack
+ * @author Mark Fisher
+ */
+public class RabbitPriceDataGateway extends RabbitGatewaySupport implements PriceDataGateway {
+	
+
+	private MessageProperties properties;
+	
+	/**
+	 * Key to send price information.
+	 */
+	private static String PRICING_ROUTING_KEY = "com.bfair.pricing.price"; 
+	
+	@Autowired
+	private PriceDataService priceDataService;
+
+	@Autowired
+	private MarketDataService marketDataService;
+	
+	public RabbitPriceDataGateway() {
+
+	}
+
+	private MessageProperties getMessageProperties() {
+		if(properties == null) {
+			properties = new MessageProperties();
+			properties.setDeliveryMode(MessageDeliveryMode.PERSISTENT);
+			properties.setContentType(MessageProperties.CONTENT_TYPE_JSON);
+		} 
+		return properties;
+	}
+	
+	public void sendPriceData() {
+		String[] changedIds = marketDataService.getChangedIds(); 
+		priceDataService.recalculatePrices(changedIds);
+		for(String s: priceDataService.getChangedIds()) {
+			System.out.println(s);
+		}
+		getRabbitTemplate().convertAndSend(PRICING_ROUTING_KEY,
+				MessageConverterFactory.getInstance(typeMapper()).toMessage(new Price(), getMessageProperties()));
+	}
+
+	private DefaultClassMapper typeMapper() {
+		DefaultClassMapper typeMapper = new DefaultClassMapper();
+		Map<String, Class<?>> idClassMapping = new HashMap<String, Class<?>>();
+		idClassMapping.put("pricedto", Price.class);
+		typeMapper.setIdClassMapping(idClassMapping);
+		return typeMapper;
+	}
+
+
+}

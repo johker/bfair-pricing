@@ -17,8 +17,8 @@
 	<import resource="classpath:server-services.xml" />
 	<import resource="classpath:server-jmx.xml" />
 
-	<!--task:scheduled-tasks>
-		<task:scheduled ref="marketDataGateway" method="sendMarketData" fixed-delay="5000"/>
-	</task:scheduled-tasks-->
+	<task:scheduled-tasks>
+		<task:scheduled ref="priceDataGateway" method="sendPriceData" fixed-delay="10000"/>
+	</task:scheduled-tasks>
 	
 </beans>

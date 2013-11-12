@@ -21,12 +21,13 @@ import org.springframework.amqp.rabbit.stocks.dto.Item;
 import org.springframework.amqp.rabbit.stocks.dto.Market;
 import org.springframework.amqp.rabbit.stocks.dto.Price;
 import org.springframework.amqp.rabbit.stocks.dto.Runner;
-import org.springframework.amqp.rabbit.stocks.service.PriceCalculationService;
+import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
+import org.springframework.amqp.rabbit.stocks.service.PriceDataService;
 
 
 /**
  * POJO handler that receives trade requests and sends back a trade response.  Main application
- * logic sits here which coordinates between {@link PriceCalculationService} , ....
+ * logic sits here which coordinates between {@link MarketDataService} , ....
  * 
  * @author Mark Pollack
  *
@@ -34,18 +35,20 @@ import org.springframework.amqp.rabbit.stocks.service.PriceCalculationService;
 public class ServerHandler {
 
     
-    private PriceCalculationService priceService;   
+    private MarketDataService marketDataService;   
    
-	public ServerHandler( PriceCalculationService priceService) {
-		this.priceService = priceService;
+	public ServerHandler(MarketDataService marketDataService) {
+		this.marketDataService = marketDataService;
 	}
 	
-	
-	
-	
-	public Price handleMessage(Market data) {		
-			return priceService.updatePrice(data); 
-		}
+	/**
+	 * Expects Price object or void as return type.
+	 * @param market
+	 */
+	public void handleMessage(Market market) {
+		marketDataService.updateMarketData(market);
+		
+	}
 		
 	
 	

@@ -13,38 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package org.springframework.amqp.rabbit.stocks;
-
-import org.junit.After;
-import org.junit.Test;
-
-
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+package org.springframework.amqp.rabbit.stocks.gateway;
 
 /**
- * Server application than can be run as an app or unit test.
- * 
+ * Gateway interface for sending market data to clients
  * @author Mark Pollack
+ *
  */
-public class Server {
+public interface PriceDataGateway {
 
-	private ClassPathXmlApplicationContext context;
-
-	public static void main(String[] args) {
-		new Server().run();
-	}
-
-	@After
-	public void close() {
-		if (context != null) {
-			context.close();
-		}
-	}
-
-	@Test
-	public void run() {
-		context = new ClassPathXmlApplicationContext("server-bootstrap-config.xml");
-	}
-
+	void sendPriceData();
 }
