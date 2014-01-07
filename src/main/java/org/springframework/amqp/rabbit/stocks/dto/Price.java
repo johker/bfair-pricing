@@ -5,6 +5,16 @@ public class Price {
 	private double theoretical;
 	
 	private String marketId;
+	
+	private String selectionId;
+	
+	public String getSelectionId() {
+		return selectionId;
+	}
+
+	public void setSelectionId(String selectionId) {
+		this.selectionId = selectionId;
+	}
 
 	public double getTheoretical() {
 		return theoretical;

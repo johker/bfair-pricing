@@ -16,6 +16,7 @@
 	<import resource="classpath:server-messaging.xml" />
 	<import resource="classpath:server-services.xml" />
 	<import resource="classpath:server-jmx.xml" />
+	<import resource="classpath:server-properties.xml" />
 
 	<task:scheduled-tasks>
 		<task:scheduled ref="priceDataGateway" method="sendPriceData" fixed-delay="10000"/>

@@ -2,21 +2,30 @@ package org.springframework.amqp.rabbit.stocks.service.data;
 
 
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
+import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.stocks.dto.Market;
-import org.springframework.amqp.rabbit.stocks.dto.Price;
+import org.springframework.amqp.rabbit.stocks.dto.utils.MarketComparator;
+import org.springframework.amqp.rabbit.stocks.utils.logging.MarketIdLogger;
 
 public class MarketDataStorage extends AbstractDataStorage {
 
+	static Logger log = Logger.getLogger(MarketDataStorage.class.getName());
+	
 	private static MarketDataStorage instance = new MarketDataStorage(); 
 	
 	private Map<String, Market> markets = Collections.synchronizedMap(new TreeMap<String, Market>());
 	
-	private MarketDataStorage() { }
+	private Comparator<Market> marketComparator = new MarketComparator(); 
+		
+	private MarketDataStorage() {
+
+	}
 	
 	public static MarketDataStorage getInstance() {
 		return instance;
@@ -34,7 +43,7 @@ public class MarketDataStorage extends AbstractDataStorage {
 	public Set<String> getMarkets() {
 		return markets.keySet();
 	}
-	
+
 	/**
 	 * 
 	 * @param id
@@ -52,11 +61,19 @@ public class MarketDataStorage extends AbstractDataStorage {
 		return false;
 	}
 	
-	private void updateChanges(String id, Market market) {
-		if(!markets.get(id).equals(market)) {
-			changedIds.add(id);  
+	/**
+	 * Checks if market object has changed and adds id 
+	 * to List of changed ids if necessary. 
+	 * @param mid
+	 * @param market
+	 */
+	private void updateChanges(String mid, Market market) {
+		if(marketComparator.compare(markets.get(mid), market) != 0) {
+			MarketIdLogger.debug(log, markets.get(mid).getMarketId(), "Update Market Data (" + (new Date()).toString() + ", " + markets.get(mid).getMarketId() + ") - Changed Data");
+			changedIds.add(mid);  
 		} else {
-			changedIds.remove(id);
+			MarketIdLogger.debug(log, markets.get(mid).getMarketId(), "Update Market Data (" + (new Date()).toString() + ", " + markets.get(mid).getMarketId() + ") - No Changes");
+			changedIds.remove(mid);
 		}
 	}
 	

@@ -1,14 +1,17 @@
 package org.springframework.amqp.rabbit.stocks.service.stubs;
 
+import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.stocks.dto.Market;
 import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
 import org.springframework.amqp.rabbit.stocks.service.data.MarketDataStorage;
-import org.springframework.amqp.rabbit.stocks.service.data.PriceDataStorage;
+
+
 
 public class MarketDataServiceStub implements MarketDataService {
 
-
-	public void updateMarketData(Market market) {
+	static Logger log = Logger.getLogger(MarketDataServiceStub.class.getName());
+	
+	public void updateMarketData(Market market) {		
 		MarketDataStorage.getInstance().updateMarket(market.getMarketId(), market);
 	}
 

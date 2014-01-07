@@ -1,12 +1,12 @@
 package org.springframework.amqp.rabbit.stocks.service.data;
 
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.Comparator;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 import org.springframework.amqp.rabbit.stocks.dto.Price;
+import org.springframework.amqp.rabbit.stocks.dto.utils.PriceComparator;
 
 public class PriceDataStorage extends AbstractDataStorage {
 
@@ -14,6 +14,8 @@ public class PriceDataStorage extends AbstractDataStorage {
 	
 	private Map<String, Price> theoreticals = Collections.synchronizedMap(new TreeMap<String, Price>());
 		
+	private Comparator<Price> priceComparator = new PriceComparator();
+	
 	private PriceDataStorage() { }
 	
 	public static PriceDataStorage getInstance() {
@@ -21,8 +23,8 @@ public class PriceDataStorage extends AbstractDataStorage {
 	}
 	
 	/**
-	 * Add new price and updates list of changed ids.
-	 * @param id
+	 * Add new price and updates list of changed selection ids.
+	 * @param selection id
 	 * @param price
 	 */
 	public void addPrice(String id, Price price) {
@@ -52,7 +54,7 @@ public class PriceDataStorage extends AbstractDataStorage {
 	}
 	
 	private void updateChanges(String id, Price price) {
-		if(!theoreticals.get(id).equals(price)) {
+		if(priceComparator.compare(theoreticals.get(id), price) != 0) {
 			changedIds.add(id);  
 		} else {
 			changedIds.remove(id);

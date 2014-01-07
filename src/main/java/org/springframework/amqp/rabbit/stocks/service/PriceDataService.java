@@ -1,7 +1,5 @@
 package org.springframework.amqp.rabbit.stocks.service;
 
-import java.util.List;
-
 import org.springframework.amqp.rabbit.stocks.dto.Price;
 
 public interface PriceDataService {
@@ -13,7 +11,7 @@ public interface PriceDataService {
 	void updatePrice(String id);
 	
 	/** 
-	 * Get price by its id.
+	 * Get price by its selection id.
 	 * @param id
 	 * @return
 	 */

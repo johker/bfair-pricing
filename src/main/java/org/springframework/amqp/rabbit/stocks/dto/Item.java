@@ -1,6 +1,7 @@
 package org.springframework.amqp.rabbit.stocks.dto;
 
-public class Item {
+
+public class Item implements IData {
 	
 	private double size; 
 	

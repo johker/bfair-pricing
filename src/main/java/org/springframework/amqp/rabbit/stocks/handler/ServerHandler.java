@@ -15,14 +15,8 @@
  */
 package org.springframework.amqp.rabbit.stocks.handler;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.springframework.amqp.rabbit.stocks.dto.Item;
 import org.springframework.amqp.rabbit.stocks.dto.Market;
-import org.springframework.amqp.rabbit.stocks.dto.Price;
-import org.springframework.amqp.rabbit.stocks.dto.Runner;
 import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
-import org.springframework.amqp.rabbit.stocks.service.PriceDataService;
 
 
 /**

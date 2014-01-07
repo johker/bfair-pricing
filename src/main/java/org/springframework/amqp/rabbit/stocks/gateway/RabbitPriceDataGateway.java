@@ -16,9 +16,11 @@
 
 package org.springframework.amqp.rabbit.stocks.gateway;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.support.RabbitGatewaySupport;
@@ -26,6 +28,7 @@ import org.springframework.amqp.rabbit.stocks.dto.Price;
 import org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory;
 import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
 import org.springframework.amqp.rabbit.stocks.service.PriceDataService;
+import org.springframework.amqp.rabbit.stocks.utils.logging.MarketIdLogger;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -37,6 +40,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class RabbitPriceDataGateway extends RabbitGatewaySupport implements PriceDataGateway {
 	
+	static Logger log = Logger.getLogger(RabbitPriceDataGateway.class.getName());
 
 	private MessageProperties properties;
 	
@@ -50,7 +54,8 @@ public class RabbitPriceDataGateway extends RabbitGatewaySupport implements Pric
 
 	@Autowired
 	private MarketDataService marketDataService;
-	
+
+
 	public RabbitPriceDataGateway() {
 
 	}
@@ -67,11 +72,13 @@ public class RabbitPriceDataGateway extends RabbitGatewaySupport implements Pric
 	public void sendPriceData() {
 		String[] changedIds = marketDataService.getChangedIds(); 
 		priceDataService.recalculatePrices(changedIds);
-		for(String s: priceDataService.getChangedIds()) {
-			System.out.println(s);
+		for(String sid : priceDataService.getChangedIds()) {
+			Price price = priceDataService.getPrice(sid);
+			MarketIdLogger.debug(log, price.getMarketId(), "New Price for " + price.getSelectionId() +  " at: " + price.getTheoretical() + " (" + (new Date()).toString() + ")");
+			getRabbitTemplate().convertAndSend(PRICING_ROUTING_KEY,
+					MessageConverterFactory.getInstance(typeMapper()).toMessage(price, getMessageProperties()));
 		}
-		getRabbitTemplate().convertAndSend(PRICING_ROUTING_KEY,
-				MessageConverterFactory.getInstance(typeMapper()).toMessage(new Price(), getMessageProperties()));
+		
 	}
 
 	private DefaultClassMapper typeMapper() {
@@ -81,6 +88,4 @@ public class RabbitPriceDataGateway extends RabbitGatewaySupport implements Pric
 		typeMapper.setIdClassMapping(idClassMapping);
 		return typeMapper;
 	}
-
-
 }

@@ -18,7 +18,6 @@ package org.springframework.amqp.rabbit.stocks.config;
 
 
 import org.springframework.amqp.core.AmqpAdmin;
-import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
