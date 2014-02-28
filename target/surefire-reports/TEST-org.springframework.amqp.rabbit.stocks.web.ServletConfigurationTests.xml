@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.springframework.amqp.rabbit.stocks.web.ServletConfigurationTests" time="2.466" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0_51\jre\bin"/>
+    <property name="java.vm.version" value="24.51-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\kern\repo\github\bfair-pricing"/>
+    <property name="java.runtime.version" value="1.7.0_51-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\kern\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.2.1\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.7.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Kaspersky Lab\Kaspersky Endpoint Security 10 für Windows\;C:\Vagrant\bin;C:\apache-maven-3.2.1\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\kern"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="kern"/>
+    <property name="java.class.path" value="C:\apache-maven-3.2.1\bin\..\boot\plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.7.0_51\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="de"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0_51"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.7.0_51\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\apache-maven-3.2.1\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase name="testContext" classname="org.springframework.amqp.rabbit.stocks.web.ServletConfigurationTests" time="2.466">
+    <error message="Failed to start bean &apos;org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0&apos;; nested exception is java.lang.NoClassDefFoundError: org/springframework/amqp/AmqpAuthenticationException" type="org.springframework.context.ApplicationContextException"><![CDATA[org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'; nested exception is java.lang.NoClassDefFoundError: org/springframework/amqp/AmqpAuthenticationException
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.createBlockingQueueConsumer(SimpleMessageListenerContainer.java:412)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.initializeConsumers(SimpleMessageListenerContainer.java:392)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doStart(SimpleMessageListenerContainer.java:322)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.start(AbstractMessageListenerContainer.java:363)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:173)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:51)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:346)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:149)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:773)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:485)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at org.springframework.amqp.rabbit.stocks.web.ServletConfigurationTests.testContext(ServletConfigurationTests.java:27)
+]]></error>
+    <system-out>17:10:12.908 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:10:12.913 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:10:12.913 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:10:12.916 [main] INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68d505: startup date [Fri Feb 28 17:10:12 CET 2014]; root of context hierarchy
+17:10:12.950 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:10:12.950 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:10:12.950 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:10:12.960 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-bootstrap-config.xml]
+17:10:12.975 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.000 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+17:10:13.011 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http-3.0.xsd=org/springframework/integration/http/config/spring-integration-http-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file-2.0.xsd=org/springframework/integration/file/config/spring-integration-file-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.2.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.2.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http-2.1.xsd=org/springframework/integration/http/config/spring-integration-http-2.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/integration/spring-integration-2.1.xsd=org/springframework/integration/config/xml/spring-integration-2.1.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file.xsd=org/springframework/integration/file/config/spring-integration-file-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/integration/spring-integration-3.0.xsd=org/springframework/integration/config/xml/spring-integration-3.0.xsd, http://www.springframework.org/schema/integration/spring-integration.xsd=org/springframework/integration/config/xml/spring-integration-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http-2.0.xsd=org/springframework/integration/http/config/spring-integration-http-2.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.1.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file-1.0.xsd=org/springframework/integration/file/config/spring-integration-file-1.0.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http.xsd=org/springframework/integration/http/config/spring-integration-http-3.0.xsd, http://www.springframework.org/schema/integration/spring-integration-2.0.xsd=org/springframework/integration/config/xml/spring-integration-2.0.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream-2.2.xsd=org/springframework/integration/stream/config/spring-integration-stream-2.2.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/integration/ip/spring-integration-ip-2.2.xsd=org/springframework/integration/ip/config/spring-integration-ip-2.2.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd=org/springframework/integration/stream/config/spring-integration-stream-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http-1.0.xsd=org/springframework/integration/http/config/spring-integration-http-1.0.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd=org/springframework/amqp/rabbit/config/spring-rabbit-1.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/integration/ip/spring-integration-ip-3.0.xsd=org/springframework/integration/ip/config/spring-integration-ip-3.0.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream-2.1.xsd=org/springframework/integration/stream/config/spring-integration-stream-2.1.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/integration/ip/spring-integration-ip-2.1.xsd=org/springframework/integration/ip/config/spring-integration-ip-2.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/integration/spring-integration-1.0.xsd=org/springframework/integration/config/xml/spring-integration-1.0.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream-3.0.xsd=org/springframework/integration/stream/config/spring-integration-stream-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file-2.2.xsd=org/springframework/integration/file/config/spring-integration-file-2.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream-2.0.xsd=org/springframework/integration/stream/config/spring-integration-stream-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/integration/ip/spring-integration-ip-2.0.xsd=org/springframework/integration/ip/config/spring-integration-ip-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file-2.1.xsd=org/springframework/integration/file/config/spring-integration-file-2.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-4.0.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/integration/http/spring-integration-http-2.2.xsd=org/springframework/integration/http/config/spring-integration-http-2.2.xsd, http://www.springframework.org/schema/integration/file/spring-integration-file-3.0.xsd=org/springframework/integration/file/config/spring-integration-file-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/integration/stream/spring-integration-stream-1.0.xsd=org/springframework/integration/stream/config/spring-integration-stream-1.0.xsd, http://www.springframework.org/schema/integration/spring-integration-2.2.xsd=org/springframework/integration/config/xml/spring-integration-2.2.xsd, http://www.springframework.org/schema/integration/ip/spring-integration-ip.xsd=org/springframework/integration/ip/config/spring-integration-ip-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.0.xsd}
+17:10:13.014 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.055 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+17:10:13.063 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+17:10:13.067 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/task/spring-task-3.0.xsd] in classpath: org/springframework/scheduling/config/spring-task-3.0.xsd
+17:10:13.076 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.095 [main] DEBUG o.s.b.f.x.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/rabbit=org.springframework.amqp.rabbit.config.RabbitNamespaceHandler, http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/integration/ip=org.springframework.integration.ip.config.IpNamespaceHandler, http://www.springframework.org/schema/integration/file=org.springframework.integration.file.config.FileNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/integration=org.springframework.integration.config.xml.IntegrationNamespaceHandler, http://www.springframework.org/schema/integration/http=org.springframework.integration.http.config.HttpNamespaceHandler, http://www.springframework.org/schema/integration/stream=org.springframework.integration.stream.config.StreamNamespaceHandler}
+17:10:13.121 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:10:13.121 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:10:13.121 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:10:13.129 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server]
+17:10:13.129 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server] for files matching pattern [C:/kern/repo/github/bfair-pricing/target/classes/org/springframework/amqp/rabbit/stocks/config/server/**/*.class]
+17:10:13.132 [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/springframework/amqp/rabbit/stocks/config/server/**/*.class] to resources [file [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server\RabbitServerConfiguration.class], file [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server\StaticContextAccessor.class]]
+17:10:13.155 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server\RabbitServerConfiguration.class]
+17:10:13.156 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\kern\repo\github\bfair-pricing\target\classes\org\springframework\amqp\rabbit\stocks\config\server\StaticContextAccessor.class]
+17:10:13.176 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-handlers.xml]
+17:10:13.177 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.179 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.198 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.198 [main] DEBUG o.s.b.f.x.BeanDefinitionParserDelegate - No XML 'id' specified - using 'serverHandler' as bean name and [] as aliases
+17:10:13.201 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 1 bean definitions from location pattern [classpath:server-handlers.xml]
+17:10:13.201 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Imported 1 bean definitions from URL location [classpath:server-handlers.xml]
+17:10:13.202 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-messaging.xml]
+17:10:13.205 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.206 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.217 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd] in classpath: org/springframework/amqp/rabbit/config/spring-rabbit-1.0.xsd
+17:10:13.226 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.247 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 2 bean definitions from location pattern [classpath:server-messaging.xml]
+17:10:13.247 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Imported 2 bean definitions from URL location [classpath:server-messaging.xml]
+17:10:13.248 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-services.xml]
+17:10:13.250 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.252 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.261 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.262 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 2 bean definitions from location pattern [classpath:server-services.xml]
+17:10:13.262 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Imported 2 bean definitions from URL location [classpath:server-services.xml]
+17:10:13.262 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-jmx.xml]
+17:10:13.264 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.268 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.276 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+17:10:13.279 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+17:10:13.282 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.288 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 3 bean definitions from location pattern [classpath:server-jmx.xml]
+17:10:13.289 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Imported 3 bean definitions from URL location [classpath:server-jmx.xml]
+17:10:13.289 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [server-properties.xml]
+17:10:13.292 [main] DEBUG o.s.b.f.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+17:10:13.294 [main] DEBUG o.s.b.f.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+17:10:13.300 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+17:10:13.301 [main] DEBUG o.s.b.f.x.BeanDefinitionParserDelegate - No XML 'id' specified - using 'configuration' as bean name and [] as aliases
+17:10:13.302 [main] DEBUG o.s.b.f.x.BeanDefinitionParserDelegate - No XML 'id' specified - using 'fileChangedStrategy' as bean name and [] as aliases
+17:10:13.302 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 2 bean definitions from location pattern [classpath:server-properties.xml]
+17:10:13.302 [main] DEBUG o.s.b.f.x.DefaultBeanDefinitionDocumentReader - Imported 2 bean definitions from URL location [classpath:server-properties.xml]
+17:10:13.309 [main] DEBUG o.s.b.f.xml.XmlBeanDefinitionReader - Loaded 20 bean definitions from location pattern [classpath:/server-bootstrap-config.xml]
+17:10:13.309 [main] DEBUG o.s.c.s.ClassPathXmlApplicationContext - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@68d505: org.springframework.beans.factory.support.DefaultListableBeanFactory@14b5854: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,rabbitServerConfiguration,staticContextAccessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,serverHandler,priceDataGateway,org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0,marketDataService,priceDataService,mbeanExporter,registry,serverConnector,configuration,fileChangedStrategy,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.IntervalTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0]; root of factory hierarchy
+17:10:13.342 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:10:13.342 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:10:13.356 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+17:10:13.358 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:10:13.414 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.stockRequestQueue()
+17:10:13.415 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.typeMapper()
+17:10:13.415 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.jsonMessageConverter()
+17:10:13.416 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.connectionFactory()
+17:10:13.416 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.rabbitTemplate()
+17:10:13.417 [main] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration.amqpAdmin()
+17:10:13.492 [main] DEBUG o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration; enhanced class name is: org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration$$EnhancerBySpringCGLIB$$d1540c44
+17:10:13.493 [main] DEBUG o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'rabbitServerConfiguration' existing class name 'org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration' with enhanced class name 'org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration$$EnhancerBySpringCGLIB$$d1540c44'
+17:10:13.498 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+17:10:13.498 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+17:10:13.499 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0' to allow for resolving potential circular references
+17:10:13.539 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+17:10:13.546 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:10:13.546 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:10:13.547 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+17:10:13.547 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:10:13.547 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:10:13.548 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:10:13.548 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+17:10:13.548 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:10:13.548 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:10:13.548 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+17:10:13.552 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+17:10:13.556 [main] DEBUG o.s.c.s.ClassPathXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@2bf9b5]
+17:10:13.558 [main] DEBUG o.s.c.s.ClassPathXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@61d517]
+17:10:13.564 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14b5854: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,rabbitServerConfiguration,staticContextAccessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,serverHandler,priceDataGateway,org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0,marketDataService,priceDataService,mbeanExporter,registry,serverConnector,configuration,fileChangedStrategy,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.IntervalTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,stockRequestQueue,typeMapper,jsonMessageConverter,connectionFactory,rabbitTemplate,amqpAdmin]; root of factory hierarchy
+17:10:13.564 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+17:10:13.565 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.565 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'rabbitServerConfiguration'
+17:10:13.572 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.amqp.rabbit.stocks.config.server.RabbitServerConfiguration$$EnhancerBySpringCGLIB$$d1540c44]: AutowiredFieldElement for private int org.springframework.amqp.rabbit.stocks.config.AbstractStockAppRabbitConfiguration.port
+17:10:13.572 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'rabbitServerConfiguration' to allow for resolving potential circular references
+17:10:13.577 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'rabbitServerConfiguration': AutowiredFieldElement for private int org.springframework.amqp.rabbit.stocks.config.AbstractStockAppRabbitConfiguration.port
+17:10:13.587 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'rabbitServerConfiguration'
+17:10:13.587 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'staticContextAccessor'
+17:10:13.587 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'staticContextAccessor'
+17:10:13.589 [main] DEBUG o.s.c.a.CommonAnnotationBeanPostProcessor - Found init method on class [org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor]: public void org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor.registerInstance()
+17:10:13.589 [main] DEBUG o.s.c.a.CommonAnnotationBeanPostProcessor - Registered init method on class [org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor]: org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement@1351d458
+17:10:13.591 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor]: AutowiredFieldElement for private org.springframework.context.ApplicationContext org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor.applicationContext
+17:10:13.591 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'staticContextAccessor' to allow for resolving potential circular references
+17:10:13.592 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'staticContextAccessor': AutowiredFieldElement for private org.springframework.context.ApplicationContext org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor.applicationContext
+17:10:13.595 [main] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'staticContextAccessor' to bean named 'org.springframework.context.support.ClassPathXmlApplicationContext@68d505'
+17:10:13.595 [main] DEBUG o.s.c.a.CommonAnnotationBeanPostProcessor - Invoking init method on bean 'staticContextAccessor': public void org.springframework.amqp.rabbit.stocks.config.server.StaticContextAccessor.registerInstance()
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'staticContextAccessor'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'serverHandler'
+17:10:13.596 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'serverHandler'
+17:10:13.598 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'marketDataService'
+17:10:13.599 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'marketDataService'
+17:10:13.606 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'marketDataService' to allow for resolving potential circular references
+17:10:13.611 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'marketDataService'
+17:10:13.614 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'serverHandler' to allow for resolving potential circular references
+17:10:13.616 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'serverHandler'
+17:10:13.616 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'priceDataGateway'
+17:10:13.616 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'priceDataGateway'
+17:10:13.618 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway]: AutowiredFieldElement for private org.springframework.amqp.rabbit.stocks.service.PriceDataService org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway.priceDataService
+17:10:13.618 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway]: AutowiredFieldElement for private org.springframework.amqp.rabbit.stocks.service.MarketDataService org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway.marketDataService
+17:10:13.618 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'priceDataGateway' to allow for resolving potential circular references
+17:10:13.621 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'priceDataGateway': AutowiredFieldElement for private org.springframework.amqp.rabbit.stocks.service.PriceDataService org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway.priceDataService
+17:10:13.621 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'priceDataService'
+17:10:13.622 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'priceDataService'
+17:10:13.624 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'priceDataService' to allow for resolving potential circular references
+17:10:13.626 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'priceDataService'
+17:10:13.626 [main] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'priceDataGateway' to bean named 'priceDataService'
+17:10:13.626 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'priceDataGateway': AutowiredFieldElement for private org.springframework.amqp.rabbit.stocks.service.MarketDataService org.springframework.amqp.rabbit.stocks.gateway.RabbitPriceDataGateway.marketDataService
+17:10:13.626 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'marketDataService'
+17:10:13.626 [main] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'priceDataGateway' to bean named 'marketDataService'
+17:10:13.626 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'rabbitTemplate'
+17:10:13.626 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'rabbitTemplate'
+17:10:13.627 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.644 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'connectionFactory'
+17:10:13.644 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'connectionFactory'
+17:10:13.644 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.662 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'connectionFactory' to allow for resolving potential circular references
+17:10:13.666 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'connectionFactory'
+17:10:13.707 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jsonMessageConverter'
+17:10:13.707 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'jsonMessageConverter'
+17:10:13.707 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'typeMapper'
+17:10:13.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'typeMapper'
+17:10:13.711 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.712 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'typeMapper' to allow for resolving potential circular references
+17:10:13.714 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'typeMapper'
+17:10:13.714 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'typeMapper'
+17:10:13.834 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'jsonMessageConverter' to allow for resolving potential circular references
+17:10:13.837 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'jsonMessageConverter'
+17:10:13.844 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'rabbitTemplate' to allow for resolving potential circular references
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'rabbitTemplate'
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'rabbitTemplate'
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'priceDataGateway'
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'priceDataGateway'
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:13.849 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:13.857 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0' to allow for resolving potential circular references
+17:10:13.862 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'connectionFactory'
+17:10:13.862 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)'
+17:10:13.869 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'serverHandler'
+17:10:13.869 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jsonMessageConverter'
+17:10:13.870 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)'
+17:10:13.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'stockRequestQueue'
+17:10:13.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'stockRequestQueue'
+17:10:13.892 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:13.893 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'stockRequestQueue' to allow for resolving potential circular references
+17:10:13.898 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'stockRequestQueue'
+17:10:13.900 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:13.901 [main] WARN  o.s.a.r.l.SimpleMessageListenerContainer - CachingConnectionFactory's channelCacheSize can not be less than the number of concurrentConsumers so it was reset to match: 5
+17:10:13.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:13.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'marketDataService'
+17:10:13.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'priceDataService'
+17:10:13.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'mbeanExporter'
+17:10:13.901 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'mbeanExporter'
+17:10:13.912 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'mbeanExporter' to allow for resolving potential circular references
+17:10:13.918 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'mbeanExporter'
+17:10:13.956 [main] DEBUG o.s.jmx.support.JmxUtils - Found MBeanServer: com.sun.jmx.mbeanserver.JmxMBeanServer@c85c31
+17:10:13.956 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:10:13.956 [main] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Autodetecting user-defined JMX MBeans
+17:10:13.957 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'registry'
+17:10:13.958 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'registry'
+17:10:13.958 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'registry' to allow for resolving potential circular references
+17:10:13.961 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'registry'
+17:10:13.961 [main] INFO  o.s.r.rmi.RmiRegistryFactoryBean - Looking for RMI registry at port '1099'
+17:10:15.003 [main] DEBUG o.s.r.rmi.RmiRegistryFactoryBean - RMI registry access threw exception
+java.rmi.ConnectException: Connection refused to host: 169.254.4.214; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.7.0_51]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.7.0_51]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.7.0_51]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:341) ~[na:1.7.0_51]
+	at sun.rmi.registry.RegistryImpl_Stub.list(Unknown Source) ~[na:1.7.0_51]
+	at org.springframework.remoting.rmi.RmiRegistryFactoryBean.testRegistry(RmiRegistryFactoryBean.java:282) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.remoting.rmi.RmiRegistryFactoryBean.getRegistry(RmiRegistryFactoryBean.java:260) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.remoting.rmi.RmiRegistryFactoryBean.getRegistry(RmiRegistryFactoryBean.java:237) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.remoting.rmi.RmiRegistryFactoryBean.getRegistry(RmiRegistryFactoryBean.java:194) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.remoting.rmi.RmiRegistryFactoryBean.afterPropertiesSet(RmiRegistryFactoryBean.java:165) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:294) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:890) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.jmx.export.MBeanExporter.autodetectMBeans(MBeanExporter.java:863) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:524) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.jmx.export.MBeanExporter.afterPropertiesSet(MBeanExporter.java:417) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700) [spring-beans-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.&lt;init&gt;(ClassPathXmlApplicationContext.java:139) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.&lt;init&gt;(ClassPathXmlApplicationContext.java:83) [spring-context-4.0.2.RELEASE.jar:4.0.2.RELEASE]
+	at org.springframework.amqp.rabbit.stocks.web.ServletConfigurationTests.testContext(ServletConfigurationTests.java:27) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_51]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) [junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) [junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271) [junit-4.11.jar:na]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70) [junit-4.11.jar:na]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264) [surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124) [surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200) [surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153) [surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.15.jar:2.15]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.7.0_51]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_51]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.7.0_51]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.7.0_51]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_51]
+	at java.net.Socket.connect(Socket.java:528) ~[na:1.7.0_51]
+	at java.net.Socket.&lt;init&gt;(Socket.java:425) ~[na:1.7.0_51]
+	at java.net.Socket.&lt;init&gt;(Socket.java:208) ~[na:1.7.0_51]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.7.0_51]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:147) ~[na:1.7.0_51]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.7.0_51]
+	... 60 common frames omitted
+17:10:15.005 [main] INFO  o.s.r.rmi.RmiRegistryFactoryBean - Could not detect RMI registry - creating new one
+17:10:15.019 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'registry'
+17:10:15.019 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'serverConnector'
+17:10:15.019 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'serverConnector'
+17:10:15.021 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'serverConnector' to allow for resolving potential circular references
+17:10:15.026 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'serverConnector'
+17:10:15.026 [main] DEBUG o.s.jmx.support.JmxUtils - Found MBeanServer: com.sun.jmx.mbeanserver.JmxMBeanServer@c85c31
+17:10:15.093 [main] INFO  o.s.j.s.ConnectorServerFactoryBean - JMX connector server started: javax.management.remote.rmi.RMIConnectorServer@14708f5
+17:10:15.093 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'serverConnector'
+17:10:15.093 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'serverConnector' has been autodetected for JMX exposure
+17:10:15.097 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'serverConnector'
+17:10:15.100 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'serverConnector': registering with JMX server as MBean [javax.management.remote.rmi:name=serverConnector,type=RMIConnectorServer]
+17:10:15.100 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'mbeanExporter'
+17:10:15.100 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'registry'
+17:10:15.100 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'serverConnector'
+17:10:15.101 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'configuration'
+17:10:15.101 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'configuration'
+17:10:15.119 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'configuration' to allow for resolving potential circular references
+17:10:15.131 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'fileChangedStrategy'
+17:10:15.131 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'fileChangedStrategy'
+17:10:15.132 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'fileChangedStrategy' to allow for resolving potential circular references
+17:10:15.133 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'fileChangedStrategy'
+17:10:15.134 [main] DEBUG o.a.c.c.PropertiesConfiguration - FileName set to bfair-common.properties
+17:10:15.135 [main] DEBUG o.a.c.c.ConfigurationUtils - ConfigurationUtils.locate(): base is null, name is bfair-common.properties
+17:10:15.135 [main] DEBUG o.a.c.c.DefaultFileSystem - Could not locate file bfair-common.properties at null: no protocol: bfair-common.properties
+17:10:15.140 [main] DEBUG o.a.c.c.ConfigurationUtils - Loading configuration from the context classpath (bfair-common.properties)
+17:10:15.140 [main] DEBUG o.a.c.c.ConfigurationUtils - ConfigurationUtils.locate(): base is null, name is bfair-common.properties
+17:10:15.140 [main] DEBUG o.a.c.c.DefaultFileSystem - Could not locate file bfair-common.properties at null: no protocol: bfair-common.properties
+17:10:15.140 [main] DEBUG o.a.c.c.ConfigurationUtils - Loading configuration from the context classpath (bfair-common.properties)
+17:10:15.141 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking init method  'load' on bean with name 'configuration'
+17:10:15.141 [main] DEBUG o.a.c.c.ConfigurationUtils - ConfigurationUtils.locate(): base is null, name is bfair-common.properties
+17:10:15.141 [main] DEBUG o.a.c.c.DefaultFileSystem - Could not locate file bfair-common.properties at null: no protocol: bfair-common.properties
+17:10:15.141 [main] DEBUG o.a.c.c.ConfigurationUtils - Loading configuration from the context classpath (bfair-common.properties)
+17:10:15.141 [main] DEBUG o.a.c.c.PropertiesConfiguration - Base path set to file:///C:/kern/repo/github/bfair-pricing/target/test-classes/bfair-common.properties
+17:10:15.154 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'configuration'
+17:10:15.154 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'fileChangedStrategy'
+17:10:15.154 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.scheduling.support.ScheduledMethodRunnable#0'
+17:10:15.154 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.scheduling.support.ScheduledMethodRunnable#0'
+17:10:15.155 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'priceDataGateway'
+17:10:15.156 [main] DEBUG org.springframework.beans.BeanUtils - No property editor [java.lang.reflect.MethodEditor] found for type java.lang.reflect.Method according to 'Editor' suffix convention
+17:10:15.157 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.scheduling.support.ScheduledMethodRunnable#0' to allow for resolving potential circular references
+17:10:15.159 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.scheduling.support.ScheduledMethodRunnable#0'
+17:10:15.159 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.scheduling.config.IntervalTask#0'
+17:10:15.159 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.scheduling.config.IntervalTask#0'
+17:10:15.159 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.scheduling.support.ScheduledMethodRunnable#0'
+17:10:15.160 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.scheduling.config.IntervalTask#0' to allow for resolving potential circular references
+17:10:15.162 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.scheduling.config.IntervalTask#0'
+17:10:15.163 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0'
+17:10:15.163 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0'
+17:10:15.165 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0' to allow for resolving potential circular references
+17:10:15.171 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.scheduling.config.IntervalTask#0'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'stockRequestQueue'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'typeMapper'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jsonMessageConverter'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'connectionFactory'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitTemplate'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'amqpAdmin'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'amqpAdmin'
+17:10:15.173 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'rabbitServerConfiguration'
+17:10:15.175 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'connectionFactory'
+17:10:15.179 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'amqpAdmin' to allow for resolving potential circular references
+17:10:15.181 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'amqpAdmin'
+17:10:15.182 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'amqpAdmin'
+17:10:15.183 [main] DEBUG o.s.c.s.ClassPathXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1214124]
+17:10:15.183 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:15.184 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+17:10:15.185 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+17:10:15.185 [main] DEBUG o.s.c.s.DefaultLifecycleProcessor - Starting bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0' of type [class org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+17:10:15.185 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+17:10:15.186 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14b5854: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,rabbitServerConfiguration,staticContextAccessor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,serverHandler,priceDataGateway,org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0,marketDataService,priceDataService,mbeanExporter,registry,serverConnector,configuration,fileChangedStrategy,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.IntervalTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,stockRequestQueue,typeMapper,jsonMessageConverter,connectionFactory,rabbitTemplate,amqpAdmin]; root of factory hierarchy
+17:10:15.186 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0'
+17:10:15.187 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'mbeanExporter'
+17:10:15.187 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:10:15.187 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'serverConnector'
+17:10:15.187 [main] INFO  o.s.j.s.ConnectorServerFactoryBean - Stopping JMX connector server: javax.management.remote.rmi.RMIConnectorServer@14708f5
+17:10:15.188 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'registry'
+17:10:15.188 [main] INFO  o.s.r.rmi.RmiRegistryFactoryBean - Unexporting RMI registry
+17:10:15.189 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'
+17:10:15.189 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+17:10:15.189 [main] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+17:10:15.189 [main] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+17:10:15.189 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)': [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0]
+17:10:15.189 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'connectionFactory'
+17:10:15.189 [main] DEBUG o.s.b.f.s.DisposableBeanAdapter - Invoking destroy() on bean with name 'rabbitServerConfiguration'
+</system-out>
+  </testcase>
+</testsuite>
