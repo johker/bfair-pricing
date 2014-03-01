@@ -5,11 +5,11 @@
 	
     
     <bean id="marketDataService"
-		class="org.springframework.amqp.rabbit.stocks.service.stubs.MarketDataServiceStub">
+		class="com.bfair.pricing.service.stubs.MarketDataServiceStub">
 	</bean>
 	
     <bean id="priceDataService"
-		class="org.springframework.amqp.rabbit.stocks.service.stubs.PriceDataServiceStub">
+		class="com.bfair.pricing.service.stubs.PriceDataServiceStub">
 	</bean>
 	
 </beans>

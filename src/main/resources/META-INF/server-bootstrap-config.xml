@@ -10,7 +10,7 @@
 	<context:property-placeholder system-properties-mode="OVERRIDE"/>
 
 	<!--  pick up rabbit broker configuration -->
-	<context:component-scan base-package="com.bfair.pricing.config.server"/>
+	<context:component-scan base-package="org.springframework.amqp.rabbit.stocks.config.server"/>
 	
 	<import resource="classpath:server-handlers.xml" />
 	<import resource="classpath:server-messaging.xml" />

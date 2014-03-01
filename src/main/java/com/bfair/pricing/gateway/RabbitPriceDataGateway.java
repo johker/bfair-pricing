@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.amqp.rabbit.stocks.gateway;
+package com.bfair.pricing.gateway;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -24,13 +24,14 @@ import org.apache.log4j.Logger;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.support.RabbitGatewaySupport;
-import org.springframework.amqp.rabbit.stocks.dto.Price;
-import org.springframework.amqp.rabbit.stocks.json.MessageConverterFactory;
-import org.springframework.amqp.rabbit.stocks.service.MarketDataService;
-import org.springframework.amqp.rabbit.stocks.service.PriceDataService;
-import org.springframework.amqp.rabbit.stocks.utils.logging.MarketIdLogger;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bfair.pricing.json.MessageConverterFactory;
+import com.bfair.pricing.service.MarketDataService;
+import com.bfair.pricing.service.PriceDataService;
+import com.bfair.pricing.stocks.dto.Price;
+import com.bfair.pricing.utils.logging.MarketIdLogger;
 
 /**
  * Rabbit implementation of the {@link PriceDataGateway} for sending Market data.
