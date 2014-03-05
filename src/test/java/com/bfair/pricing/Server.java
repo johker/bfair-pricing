@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.amqp.rabbit.stocks;
+package com.bfair.pricing;
 
 import org.junit.After;
 import org.junit.Test;
