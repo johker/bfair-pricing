@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bfair.pricing;
+package com.bfair.pricing.test;
 
 import org.junit.After;
 import org.junit.Test;
@@ -27,12 +27,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @author Mark Pollack
  */
-public class Server {
+public class TestServer {
 
 	private ClassPathXmlApplicationContext context;
 
 	public static void main(String[] args) {
-		new Server().run();
+		new TestServer().run();
 	}
 
 	@After
