@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.log4j.Logger;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
@@ -27,6 +28,7 @@ import org.springframework.amqp.rabbit.core.support.RabbitGatewaySupport;
 import org.springframework.amqp.support.converter.DefaultClassMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.bfair.pricing.config.server.StaticContextAccessor;
 import com.bfair.pricing.json.MessageConverterFactory;
 import com.bfair.pricing.service.MarketDataService;
 import com.bfair.pricing.service.PriceDataService;
@@ -42,7 +44,7 @@ import com.bfair.pricing.utils.logging.MarketIdLogger;
 public class RabbitPriceDataGateway extends RabbitGatewaySupport implements PriceDataGateway {
 	
 	static Logger log = Logger.getLogger(RabbitPriceDataGateway.class.getName());
-
+	
 	private MessageProperties properties;
 	
 	/**
@@ -73,7 +75,7 @@ public class RabbitPriceDataGateway extends RabbitGatewaySupport implements Pric
 	public void sendPriceData() {
 		String[] changedIds = marketDataService.getChangedIds(); 
 		priceDataService.recalculatePrices(changedIds);
-		System.out.println("sendPriceData()"); 
+		log.info("LOG4J - sendPriceData()"); 		
 		for(String sid : priceDataService.getChangedIds()) {
 			Price price = priceDataService.getPrice(sid);
 			MarketIdLogger.debug(log, price.getMarketId(), "New Price for " + price.getSelectionId() +  " at: " + price.getTheoretical() + " (" + (new Date()).toString() + ")");

@@ -31,5 +31,6 @@ public class AmqpPricingApplication {
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run("classpath:server-bootstrap-config.xml", args);
+		System.out.println("Logging to " + System.getProperty("java.io.tmpdir"));
 	}
 }
